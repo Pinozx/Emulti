@@ -1,0 +1,8 @@
+
+Cuenta hotmail creada como servidor SMTP :
+
+----------------------------
+correo = emulti@hotmail.com
+
+contraseña = proyecto16
+----------------------------

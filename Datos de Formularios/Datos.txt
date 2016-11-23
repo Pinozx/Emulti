@@ -1,0 +1,33 @@
+  Datos: Abreviaturas.
+
+CTI: Crear Test Inteligencia
+
+MTI: Moficiar Test Inteligencia
+
+ETI: Eliminar Test Inteligencia
+
+CTP: Crear Test Psicologico
+
+MTP: Modificar Test Psicologico
+
+ETP: Eliminar Test Psicologico
+
+CCP: Crear Cuenta Profesional
+
+MCP: Modificar Cuenta Profesional
+
+ECP: Eliminar Cuenta Profesional
+
+CCPA: Crear Cuenta Padres
+
+MCPA: Modificar Cuenta Padres
+
+ECPA: Eliminar Cuenta Padres
+
+CPA: Consultar Cuenta Paciente
+
+CCA: Consultar Cuenta Apoderado
+
+COTI: Consultar test inteligencia
+
+COTP: Consultar Test Psicologico
