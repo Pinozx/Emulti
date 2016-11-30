@@ -1,5 +1,4 @@
 <?php
-ob_start();
 include("conexion.php");
 
 
@@ -15,15 +14,9 @@ $sugerencias=$_POST['sugerencias'];
 $sql = "INSERT INTO testinteligencia (runpaciente, fechacreacion, diagnostico, fechareevaluacion, caracteristica, sugerencias)
 VALUES ('$runpaciente','$fechacreacion','$diagnostico','$fechareevaluacion','$caracteristica','$sugerencias')";
 
+if ($conexion->query($sql) === TRUE) {
+      header("location:profesional.php");
 
-
-
-if(mysqli_query($conexion, $sql)){
-
-  header('Location: profesional.php');
-  ob_end_flush();
-}else{
-    echo 'Error: ' . mysqli_error($conexion);
 }
-
+mysqli_close($conexion);
 ?>

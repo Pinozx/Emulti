@@ -1,6 +1,6 @@
 <?php
   include("conexion.php");
-$id=$_POST['idintervencion'];
+$id=$_POST['id'];
 $runpaciente=$_POST['runpaciente'];
 
 ?>
@@ -212,7 +212,7 @@ $runpaciente=$_POST['runpaciente'];
 <!-- modificado de aqui hasta el boton crear-->
 <div class="row">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-        <form role="form" action="mtpphp.php" method="POST" name="formmtp" id="formmtp">
+        <form role="form" action="mtiphp.php" method="POST" name="formmti" id="formmti">
             <h2 style="color:white">Modificar Test Intervencion Psicologica</h2> <br>
 
       <div class="row">
@@ -265,7 +265,7 @@ $runpaciente=$_POST['runpaciente'];
         </div>
 
 
-        <input name="idintervencion" type="hidden" value="<?php echo $id; ?>">
+        <input name="id" type="hidden" value="<?php echo $id; ?>">
         <input name="runpaciente" type="hidden" value="<?php echo $runpaciente; ?>">
         </form>
     </div>

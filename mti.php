@@ -1,5 +1,7 @@
 <?php
   include("conexion.php");
+
+
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +33,7 @@
 <body>
 
     <!-- Navigation -->
+        <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top color-barra" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -47,17 +50,48 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a style="color:white;"href="profesional.php">Inicio</a>
-                    </li>
-                    <li>
-                        <a style="color:white;"href="#">Quienes Somos</a>
-                    </li>
-                    <li>
-                        <a style="color:white;"href="#">Contacto</a>
-                    </li>
-                </ul>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span> 
+                        <strong>MI CUENTA</strong>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="navbar-login">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <p class="text-center">
+                                            <span class="glyphicon glyphicon-user icon-size"></span>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p class="text-left"><strong>Nombre Apellido</strong></p>
+                                        <p class="text-left small">correoElectronico@email.com</p>
+                                        <p class="text-left">
+                                            <a href="#" class="btn btn-primary btn-block btn-sm">Ajuste de la Cuenta</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="navbar-login navbar-login-session">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <p>
+                                            <a href="#" class="btn btn-danger btn-block">Cerrar Sesion</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                        </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -67,47 +101,7 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-2">
-               <div class="izq">
-                <div class="profile-userpic">
-                <center>
-                    <div class="bordefoto">
-                      <img src="img/usuario2.png" class="img-responsive" alt="">
-                </div>
-                <br>
-
-
-                </center>
-
-                </div>
-                <!-- END SIDEBAR USERPIC -->
-                <!-- SIDEBAR USER TITLE -->
-                <div class="profile-usertitle">
-                    <div style="color: #B1DEF1;"class="profile-usertitle-name">
-                        PROFESIONAL
-                    </div>
-
-                </div>
-
-                <div class="profile-usermenu">
-                    <ul class="nav">
-
-                        <li>
-                            <a style="color:white;" href="#">Ajustes de Cuenta </a>
-                        </li>
-                         <li>
-                            <a style="color:white;" href="cerrarsesion.php">Salir de la Cuenta </a>
-                        </li>
-                        <li>
-                            <a style="color:white;" href="#">Ayuda </a>
-                        </li>
-                    </ul>
-                </div>
-
-               </div>
-            </div>
-
-            <div class="col-lg-10">
+            <div class="col-lg-12">
             <div class="der">
             <img class="banner" src="img/banner.jpg" style="display: none;">
 
@@ -216,19 +210,16 @@
 
        <select class="form-control" id="sel1" name="runpaciente">
 
-       <?php
-       $consulta="SELECT runpaciente from paciente";
-      $resultado=mysqli_query($conexion,$consulta);
+       <?php    $consulta="SELECT runpaciente, nombres, apellidos  from paciente";
+                         $resultado=mysqli_query($conexion,$consulta);
 
-      while($lista=mysqli_fetch_array($resultado)){
+                                while($lista=mysqli_fetch_array($resultado)){
 ?>
-         <option value="<?php echo $lista['runpaciente']?>">
-           <?php echo $lista['runpaciente']; ?>
-         </option>
+         <option value="<?php echo $lista['runpaciente']?>"><?php echo $lista['nombres'] . " " . $lista['apellidos']; ?></option>
 <?php }  ?>
 
        </select>
-       <input id="submit" type="submit" name="submit" value="Buscar">
+       <input id="submit" type="submit" name="submit" value="Buscar" class="btn btn-primary btn-lg" style="background-color: green;">
 
        </div>
      </form>
@@ -247,7 +238,49 @@
             </div>
 
 
-</div></div></div>
+
+    <!-- tabla -->
+    <div class="contenido">
+        <div class="horario table-responsive">
+          <form name="fmr_tst" action="mtiform.php" method="post">
+        <table class="table">
+
+         <tbody>
+    <?php    $consulta="SELECT * from testinteligencia";
+                      $resultado=mysqli_query($conexion,$consulta);
+
+                             while($lista=mysqli_fetch_array($resultado)){
+
+?>
+
+
+
+       <tr style="background-color:white">
+
+                <th><?php echo $lista['runpaciente'];?></th>
+                <th><?php echo $lista['fechacreacion'];?></th>
+                <th><?php echo $lista['diagnostico'];?></th>
+                <th><?php echo $lista['fechareevaluacion'];?></th>
+                <th><?php echo $lista['caracteristica'];?></th>
+                <th><?php echo $lista['sugerencias'];?></th>
+                <th><input id="submit" type="submit" name="submit" value="Modificar" class="btn btn-primary btn-lg" style="background-color: green;"></th>
+                <input name="id" type="hidden" value="<?php echo $lista['idtestinte'];?>">
+                <input name="runpaciente" type="hidden" value="<?php echo $lista['runpaciente']?>">
+        </tr>
+
+
+
+
+
+
+<?php }  ?>
+
+</tbody>
+</table>
+
+</form>
+</div>
+</div></div></div></div>
     <!-- /.container -->
 
     <!-- jQuery -->

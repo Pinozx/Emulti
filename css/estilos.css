@@ -130,9 +130,8 @@ body {
   height: 100%;
   border-radius: 20%;
   position: relative;
-
-
 }
+
 
 .bordefoto{
 	top: 20px;
@@ -331,4 +330,26 @@ body {
   /* Set the fixed height of the footer here */
   height: 30px;
 
+}
+
+
+/* CSS PARA LA CUENTA DE LA BARRA   */
+
+.navbar-login
+{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.icon-size
+{
+    font-size: 87px;
 }

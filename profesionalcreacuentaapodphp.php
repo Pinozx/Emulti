@@ -1,7 +1,7 @@
 <?php
 
   include("conexion.php");
-  include("profesionalcreacuentaapod.php");
+
 
 
 
@@ -20,5 +20,6 @@
   $resultado="INSERT INTO padres (runpadre, password, email, nombres,  apellidos, fechanacpadre, direccion, anteparto, asistenciaparto, obs) VALUES ('$runpadre','$password','$email','$nombres','$apellidos','$fechanacpadre','$direccion','$anteparto','$asistenciaparto','$obs')";
 
   mysqli_query($conexion,$resultado);
-
+  mysqli_close($conexion);
+  header("location:profesional.php");
 ?>

@@ -55,17 +55,48 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a style="color:white;"href="apoderado.php"> Inicio</a>
-                    </li>
-                    <li>
-                        <a style="color:white;"href="#">Quienes Somos</a>
-                    </li>
-                    <li>
-                        <a style="color:white;"href="#">Contacto</a>
-                    </li>
-                </ul>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span> 
+                        <strong>MI CUENTA</strong>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="navbar-login">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <p class="text-center">
+                                            <span class="glyphicon glyphicon-user icon-size"></span>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p class="text-left"><strong>Nombre Apellido</strong></p>
+                                        <p class="text-left small">correoElectronico@email.com</p>
+                                        <p class="text-left">
+                                            <a href="#" class="btn btn-primary btn-block btn-sm">Ajuste de la Cuenta</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="navbar-login navbar-login-session">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <p>
+                                            <a href="#" class="btn btn-danger btn-block">Cerrar Sesion</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                        </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -75,54 +106,11 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-2">
-               <div class="izq">
-                <div class="profile-userpic">
-                <center>
-                    <div class="bordefoto">
-                      <img src="img/usuario2.png" class="img-responsive" alt="">
-                </div>
-                <br>
-
-
-                </center>
-
-                </div>
-                <!-- END SIDEBAR USERPIC -->
-                <!-- SIDEBAR USER TITLE -->
-                <div class="profile-usertitle">
-                    <div style="color: #B1DEF1;"class="profile-usertitle-name">
-                        APODERADO
-                    </div>
-
-                </div>
-                <div class="profile-usermenu">
-                    <ul class="nav">
-
-                        <li>
-                            <a style="color:white;" href="#">Ajustes de Cuenta </a>
-                        </li>
-                         <li>
-                          <a style="color:white;" href="cerrarsesion.php">Salir de la Cuenta </a>
-                        </li>
-                        <li>
-                            <a style="color:white;" href="#">Ayuda </a>
-                        </li>
-                    </ul>
-                </div>
-
-               </div>
-            </div>
-
-            <div class="col-lg-10">
+            <div class="col-lg-12">
             <div class="der">
             <img class="banner" src="img/banner.jpg" style="display: none;">
 
             <div class="row">
-
-
-
-
 </div>
 
             <ul class="nav nav-tabs color-barrabtn">
@@ -245,7 +233,7 @@
    <!--Inicio Footer-->
  <footer class="footer">
   <div class="container">
-    <p class="Text-muted text-center">© 2016 EMULTI. Todos los derechos Reservados</p>
+    <p class="Text-muted text-center">© 2016 emulti. Todos los derechos Reservados</p>
   </div>
  </footer>
     <!--Termino Footer-->

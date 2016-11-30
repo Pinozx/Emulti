@@ -277,7 +277,7 @@
 
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="submit" class="btn btn-primary" style="background-color: green;">Enviar</button>
         </div>
       </div>
       <input type="hidden" name="phpmailer">
@@ -309,7 +309,7 @@
    <!--Inicio Footer-->
  <footer class="footer">
   <div class="container">
-    <p class="Text-muted text-center">© 2016 EMULTI. Todos los derechos Reservados</p>
+    <p class="Text-muted text-center">© 2016 emulti. Todos los derechos Reservados</p>
   </div>
  </footer>
     <!--Termino Footer-->

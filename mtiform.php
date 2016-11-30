@@ -1,7 +1,7 @@
 <?php
-include("conexion.php");
-$id = $_POST['idtestinte'];
-$runpaciente = $_POST['runpaciente'];
+  include("conexion.php");
+$id=$_POST['id'];
+$runpaciente=$_POST['runpaciente'];
 
 ?>
 
@@ -25,6 +25,10 @@ $runpaciente = $_POST['runpaciente'];
     <link href="css/logo-nav.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
 </head>
 
 <body>
@@ -132,7 +136,7 @@ $runpaciente = $_POST['runpaciente'];
                         <a tabindex="-1" href="#">Test Intervencion Psicologica</a>
                         <ul class="dropdown-menu">
                               <li><a href="ctp.php">Crear</a></li>
-                              <li><a href="mtp.php">Modificar</a></li>
+                              <li><a href="#">Modificar</a></li>
                         </ul>
                     </li>
                     </ul>
@@ -265,7 +269,7 @@ $runpaciente = $_POST['runpaciente'];
         </div>
 
 
-        <input name="idtestinte" type="hidden" value="<?php echo $id; ?>">
+        <input name="id" type="hidden" value="<?php echo $id; ?>">
         <input name="runpaciente" type="hidden" value="<?php echo $runpaciente; ?>">
         </form>
     </div>

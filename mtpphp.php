@@ -2,17 +2,18 @@
 ob_start();
 include("conexion.php");
 
-$id = $_POST['idintervencion'];
-$runpaciente = $_POST['runpaciente'];
-$fechaevaluacion = $_POST['fechaevaluacion'];
-$objetivo = $_POST['objetivo'];
-$actividad = $_POST['actividad'];
-$evaluacion = $_POST['evaluacion'];
-$sugerencias = $_POST['sugerencias'];
+$runpaciente=$_POST['runpaciente'];
+$objetivo=$_POST['objetivo'];
+$actividad=$_POST['actividad'];
+$evaluacion=$_POST['evualuacion'];
+$sugerencias=$_POST['sugerencias'];
+$id=$_POST['id'];
 
-$sql = "UPDATE testintervencionpsicologica set runpaciente='$runpaciente', fechaevaluacion='$fechaevaluacion', objetivo='$objetivo', actividad='$actividad', evaluacion='$evaluacion', sugerencias='$sugerencias'
-WHERE idintervencion = $id";
 
+
+
+$sql = "UPDATE testinteligencia set runpaciente=$runpaciente, objetivo='$objetivo', actividad='$actividad', evaluacion='$evaluacion', sugerencias='$sugerencias'
+WHERE idintervencion=$id";
 //$resultado=mysqli_query($conexion,$sql);
 
 //echo $sql;
@@ -24,5 +25,6 @@ if(mysqli_query($conexion, $sql)){
 }else{
     echo 'Error: ' . mysqli_error($conexion);
 }
+
 
 ?>

@@ -19,14 +19,14 @@
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
 
 </head>
 
 <body>
 
     <!-- Navigation -->
+       <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top color-barra" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -43,17 +43,48 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a style="color:white;"href="profesional.php">Inicio</a>
-                    </li>
-                    <li>
-                        <a style="color:white;"href="#">Quienes Somos</a>
-                    </li>
-                    <li>
-                        <a style="color:white;"href="#">Contacto</a>
-                    </li>
-                </ul>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span> 
+                        <strong>MI CUENTA</strong>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="navbar-login">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <p class="text-center">
+                                            <span class="glyphicon glyphicon-user icon-size"></span>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p class="text-left"><strong>Nombre Apellido</strong></p>
+                                        <p class="text-left small">correoElectronico@email.com</p>
+                                        <p class="text-left">
+                                            <a href="#" class="btn btn-primary btn-block btn-sm">Ajuste de la Cuenta</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="navbar-login navbar-login-session">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <p>
+                                            <a href="#" class="btn btn-danger btn-block">Cerrar Sesion</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                        </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -89,7 +120,7 @@
 							<label for="message">Mensaje</label>
 							<textarea id="message" name="message" placeholder="Intruzca Mensaje"  class="form-control" rows="3"></textarea>
 						</div>
-						<button id="send" class="btn btn-primary" >Enviar</button>
+						<button id="send" class="btn btn-primary btn-lg" style="background-color: green;" >Enviar</button>
 					</form>
 				</div>
 			</section>
@@ -138,8 +169,6 @@
 
 
 
-
-
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -151,7 +180,7 @@
    <!--Inicio Footer-->
  <footer class="footer">
   <div class="container">
-    <p class="Text-muted text-center">© 2016 EMULTI. Todos los derechos Reservados</p>
+    <p class="Text-muted text-center">© 2016 emulti. Todos los derechos Reservados</p>
   </div>
  </footer>
     <!--Termino Footer-->

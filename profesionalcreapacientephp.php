@@ -1,5 +1,4 @@
 <?php
-ob_start();
 include("conexion.php");
 
 
@@ -17,8 +16,8 @@ $sql = "INSERT INTO paciente (runpadre, runpaciente, nombres, apellidos, fechana
 VALUES ('$runpadre','$runpaciente','$nombres','$apellidos','$fechanaci','$curso','$repitencia')";
 
 if ($conexion->query($sql) === TRUE) {
-      header("Location: profesionalcreapaciente.php");
-      ob_end_flush();
+      header("location:profesionalcreapaciente.php");
+
 }
 mysqli_close($conexion);
 ?>

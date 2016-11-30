@@ -303,7 +303,7 @@ $.extend($.expr[":"],
    <!--Inicio Footer-->
  <footer class="footer">
   <div class="container">
-    <p class="Text-muted text-center">© 2016 EMULTI. Todos los derechos Reservados</p>
+    <p class="Text-muted text-center">© 2016 emulti. Todos los derechos Reservados</p>
   </div>
  </footer>
     <!--Termino Footer-->
